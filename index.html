@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solar System Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Solar System Explorer</h1>
+    <p>Using HTML • CSS • JS</p>
+  </header>
+
+  <main class="container">
+    <!-- Sidebar: planet list -->
+    <aside class="sidebar" aria-label="Planets menu">
+      <ul class="planet-list">
+        <!-- Each item holds a radio so only one planet active -->
+        <li>
+          <input type="radio" name="planet" id="planet-mercury" value="mercury" checked>
+          <label for="planet-mercury"><span class="dot dot-mercury"></span> Mercury</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-venus" value="venus">
+          <label for="planet-venus"><span class="dot dot-venus"></span> Venus</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-earth" value="earth">
+          <label for="planet-earth"><span class="dot dot-earth"></span> Earth</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-mars" value="mars">
+          <label for="planet-mars"><span class="dot dot-mars"></span> Mars</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-jupiter" value="jupiter">
+          <label for="planet-jupiter"><span class="dot dot-jupiter"></span> Jupiter</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-saturn" value="saturn">
+          <label for="planet-saturn"><span class="dot dot-saturn"></span> Saturn</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-uranus" value="uranus">
+          <label for="planet-uranus"><span class="dot dot-uranus"></span> Uranus</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-neptune" value="neptune">
+          <label for="planet-neptune"><span class="dot dot-neptune"></span> Neptune</label>
+        </li>
+        <li>
+          <input type="radio" name="planet" id="planet-pluto" value="pluto">
+          <label for="planet-pluto"><span class="dot dot-pluto"></span> Pluto</label>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main display -->
+    <section class="stage" id="stage">
+      <div class="space-scene">
+        <div class="sun"></div>
+        <div class="orbit orbit-1"><!-- optional orbit arcs --></div>
+
+        <!-- Planet display wrapper -->
+        <div class="planet-wrapper">
+          <div id="planet" class="planet earth">
+            <!-- moon (shows only for earth or when available) -->
+            <div id="moon" class="moon"></div>
+          </div>
+          <div class="planet-halo" id="halo"></div>
+        </div>
+
+        <!-- info card -->
+        <div class="info" id="info">
+          <h2 id="info-name">Mercury</h2>
+          <p id="info-desc">A small, rocky planet — closest to the Sun.</p>
+          <p class="meta"><strong>Radius:</strong> <span id="info-radius">2,440 km</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Follow to learn coding • demo by coding.stella</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
